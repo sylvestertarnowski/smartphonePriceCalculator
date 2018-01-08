@@ -3,9 +3,19 @@
   <head>
     <link type="text/css" rel="stylesheet" href="stylesheet.css">
   </head>
+  <script src="script.js"></script>
   <body>
-      <h1>This is the phone calulator app!</h1>
-      <p>Tusia jest super-fajna!</p>
+    <h1>This is the phone calulator app!</h1>
+    <p>Tusia jest super-fajna! Ta appka jest dla Tusi, żeby mogła sobie
+    obliczyć cenę smartfona!</p>
+    <p class="forms">Phone Price:
+    <input type="text" id="phoneprice" onkeyup="formChanged()"
+    onchange="formChanged()" placeholder="Type the phone cost here"/></p>
+    <p class="forms">Bank Acccout Balance:
+    <input type="text" id="bankbalance" onkeyup="formChanged()"
+    onchange="formChanged()" placeholder="Type your bank balance here"/></p>
+    <h3>Total purchase price:</h3>
+    <p id="totalprice"></p>
   </body>
-      <script src="script.js"></script>
+
 </html>
