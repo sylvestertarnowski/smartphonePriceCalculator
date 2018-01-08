@@ -9,21 +9,21 @@ the calculated purchase amount, properly formatted.
 Finally, check the amount against your bank account balance to see if
 you can afford it or not. */
 
-var phonePrice = parseFloat(prompt( 'Please tell me how much does the phone cost?'));
+var phonePrice = 299;
 var taxRate = 0.23;
-var phoneCase = parseFloat(prompt('How much does the phone case cost?'));
-var phoneHeadphones = parseFloat(prompt('How much for the headphones?'));
-var phoneGlass = parseFloat(prompt('How much does the tempered glass cost?'));
+var phoneCase = 9.99;
+var phoneHeadphones = 10.99;
+var phoneGlass = 29.99;
 var bankBalance = parseFloat(prompt('How much money do you have in your bank account?'));
 var mentalSpendingLimit = phonePrice/2;
 var purchaseAmount = phonePrice + phoneCase + phoneGlass + phoneHeadphones;
 var finalPrice = purchaseAmount + purchaseAmount * taxRate;
 
 if ((phoneCase + phoneHeadphones + phoneGlass) < mentalSpendingLimit) {
-    for (var n=0; (purchaseAmount + (purchaseAmount * taxRate)) < bankBalance; n++) {
+    for (var n=0; (purchaseAmount + (purchaseAmount * taxRate)) < (bankBalance - 100); n++) {
       purchaseAmount += (phonePrice + phoneCase + phoneHeadphones + phoneGlass);
     }
     alert('$' + purchaseAmount.toFixed(2));
 } else {
-  alert('These accessories cost way too much, refresh the page and change their cost!');
+  alert("You've ran out of money!");
 }
