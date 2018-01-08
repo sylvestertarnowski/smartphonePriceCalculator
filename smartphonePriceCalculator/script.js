@@ -9,21 +9,29 @@ the calculated purchase amount, properly formatted.
 Finally, check the amount against your bank account balance to see if
 you can afford it or not. */
 
-var phonePrice = 299;
+
+function formChanged(){   //this allows live update
+
+var phonePrice = parseFloat(document.getElementById("phoneprice").value);
 var taxRate = 0.23;
 var phoneCase = 9.99;
 var phoneHeadphones = 10.99;
 var phoneGlass = 29.99;
-var bankBalance = parseFloat(prompt('How much money do you have in your bank account?'));
-var mentalSpendingLimit = phonePrice/2;
+var bankBalance = parseFloat(document.getElementById("bankbalance").value);
+var mentalSpendingLimit = phonePrice;
 var purchaseAmount = phonePrice + phoneCase + phoneGlass + phoneHeadphones;
 var finalPrice = purchaseAmount + purchaseAmount * taxRate;
 
+/* Have to figure out away to not let the phone price show
+if there is no money in the bank */
 if ((phoneCase + phoneHeadphones + phoneGlass) < mentalSpendingLimit) {
-    for (var n=0; (purchaseAmount + (purchaseAmount * taxRate)) < (bankBalance - 100); n++) {
-      purchaseAmount += (phonePrice + phoneCase + phoneHeadphones + phoneGlass);
+    for (var n=0; (purchaseAmount + (purchaseAmount * taxRate)) < bankBalance; n++) {
+      purchaseAmount += purchaseAmount;
     }
-    alert('$' + purchaseAmount.toFixed(2));
+    // alert('$' + purchaseAmount.toFixed(2));
+    document.getElementById('totalprice').innerHTML=
+    ('$' + (purchaseAmount + (purchaseAmount * taxRate)).toFixed(2));
 } else {
-  alert("You've ran out of money!");
+  document.getElementById('totalprice').innerHTML="You cannot possibly buy that!";
+}
 }
