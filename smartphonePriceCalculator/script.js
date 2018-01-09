@@ -14,9 +14,9 @@ function formChanged(){   //this allows live update
 
 var phonePrice = parseFloat(document.getElementById("phoneprice").value);
 var taxRate = 0.23;
-var phoneCase = 9.99;
-var phoneHeadphones = 10.99;
-var phoneGlass = 29.99;
+var phoneCase = parseFloat(document.getElementById("phonecase").value);
+var phoneHeadphones = parseFloat(document.getElementById("heaphones").value);
+var phoneGlass = parseFloat(document.getElementById("phoneglass").value);
 var bankBalance = parseFloat(document.getElementById("bankbalance").value);
 var mentalSpendingLimit = phonePrice;
 var purchaseAmount = phonePrice + phoneCase + phoneGlass + phoneHeadphones;
