@@ -8,6 +8,7 @@ body {
 p {
   font-family: sans-serif;
   color: darkblue;
+  padding: 5px;
 }
 
 .forms {
