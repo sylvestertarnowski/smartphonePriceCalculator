@@ -26,11 +26,17 @@ div {
     background-color: lightgrey;
     margin: 3px;
     padding: 5px;
+    transition: background-color 2s;
+
     
 }
 #lastDiv {
     display: block;
     text-align: center;
-    width: 40%;  
-    min-width: 250px;
+    width: 300px;
+    min-width: 200px;
+}
+
+div:hover {
+    background-color: darkcyan;
 }
