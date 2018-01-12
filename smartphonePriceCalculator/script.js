@@ -25,7 +25,7 @@ var finalPrice = purchaseAmount + purchaseAmount * taxRate;
 /* Have to figure out away to not let the phone price show
 if there is no money in the bank */
 if ((phoneCase + phoneHeadphones + phoneGlass) < mentalSpendingLimit) {
-    for (var n=0; (purchaseAmount + (purchaseAmount * taxRate)) < bankBalance; n++) {
+    for (var n=0; (purchaseAmount + (purchaseAmount * taxRate)) < bankBalance - (purchaseAmount + (purchaseAmount * taxRate)); n++) {
       purchaseAmount += purchaseAmount;
     }
     // alert('$' + purchaseAmount.toFixed(2));

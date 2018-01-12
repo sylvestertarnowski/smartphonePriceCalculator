@@ -6,25 +6,24 @@
   <script src="script.js"></script>
   <body>
     <h1>This is the phone calulator app!</h1>
-    <p>Tusia jest super-fajna! Ta appka jest dla Tusi, żeby mogła sobie
-    obliczyć cenę smartfona!</p>
-    <p class="forms">Phone Price:<br>
-    <input type="text" id="phoneprice" onkeyup="formChanged()"
-    onchange="formChanged()" placeholder="Type the phone cost here"/></p>
-    <p class="forms">Phone case:<br>
-    <input type="text" id="phonecase" onkeyup="formChanged()"
-    onchange="formChanged()" placeholder="Phone case cost"/></p>
-    <p class="forms">Headphones:<br>
-    <input type="text" id="headphones" onkeyup="formChanged()"
-    onchange="formChanged()" placeholder="Headphones cost"/></p>
-    <p class="forms">Tempered Glass:<br>
-    <input type="text" id="phoneglass" onkeyup="formChanged()"
-    onchange="formChanged()" placeholder="Tempered Glass cost"/></p>
-    <p class="forms">Bank Acccout Balance:<br>
+    <p>This app purchases phones. You can get accesories to your phone, and then buy as many phones as your Bank Balance allows you to. The app then prints out a total purchase amount.</p>
+    <div><p class="forms">Bank Acccout Balance:<br>
     <input type="text" id="bankbalance" onkeyup="formChanged()"
-    onchange="formChanged()" placeholder="Type your bank balance here"/></p>
-    <h3>Total purchase price:</h3>
-    <p id="totalprice"></p>
+           onchange="formChanged()" placeholder="Type your bank balance here"/></p></div>
+    <div><p class="forms">Phone Price:<br>
+    <input type="text" id="phoneprice" onkeyup="formChanged()"
+           onchange="formChanged()" placeholder="Type the phone cost here"/></p></div>
+    <div><p class="forms">Phone case:<br>
+    <input type="text" id="phonecase" onkeyup="formChanged()"
+           onchange="formChanged()" placeholder="Phone case cost"/></p></div>
+    <div><p class="forms">Headphones:<br>
+    <input type="text" id="headphones" onkeyup="formChanged()"
+           onchange="formChanged()" placeholder="Headphones cost"/></p></div>
+    <div><p class="forms">Tempered Glass:<br>
+    <input type="text" id="phoneglass" onkeyup="formChanged()"
+           onchange="formChanged()" placeholder="Tempered Glass cost"/></p></div>
+    <div id="lastDiv"><p class="forms">Total purchase price:</p>
+      <p id="totalprice"></p></div>
   </body>
 
 </html>
